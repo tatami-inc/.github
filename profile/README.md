@@ -9,7 +9,7 @@ I couldn't get the **@tatami** or **@tatami-galaxy** handles because they were a
 Developers can use this interface to create applications that can extract data from diverse matrix representations,
 whether it be dense or sparse, row-major or column-major, in-memory or file-backed, with or without delayed operations, and so on.
 It was initially developed to support scalable analyses of genomics datasets, where the matrix representation can be easily substituted depending on the circumstances.
-**tatami**-powered applications can be used to process small in-memory matrices on a laptop, or large file-backed matrices on a high performance compute node.
+**tatami**-powered applications can thus be used to process small in-memory matrices on a laptop, or large file-backed matrices on a high performance compute node.
 
 Matrix representations currently supported by **tatami** include:
 
@@ -24,12 +24,11 @@ Matrix representations currently supported by **tatami** include:
 
 ### Using C++ 
 
-**tatami** is implemented as a header-only C++ library and can be dropped directly into an existing project.
-Check out the [core repository](https://github.com/tatami-inc/tatami) for more details;
-this provides the interface as well as many of the in-memory representations and delayed operations.
+**tatami** is implemented as a header-only C++ library and can be dropped directly into an existing C++ project, either manually or via CMake.
+Check out the [repository](https://github.com/tatami-inc/tatami) for more details on the `tatami::Matrix` interface.
 
-**tatami** extensions provide more matrix representations and can be included on an as-needed basis.
-As these often depend on additional third-party libraries, they are not included as part of the core **tatami** library. 
+**tatami** extensions implement more complex matrix representations and can be included by applications on an as-needed basis.
+As these often depend on additional third-party libraries, they are not included as part of the core library. 
 
 - [**tatami_hdf5**](https://github.com/tatami-inc/tatami_hdf5) provides representations for HDF5-backed matrices.
 - [**tatami_tiledb**](https://github.com/tatami-inc/tatami_tiledb) provides representations for TileDB-backed matrices.
@@ -39,7 +38,7 @@ As these often depend on additional third-party libraries, they are not included
 
 The **beachmat** R package ([Bioconductor](https://bioconductor.org/packages/beachmat), [GitHub](https://github.com/tatami-inc/beachmat)) vendors the **tatami** library,
 allowing R package developers to compile their C++ code against the **tatami** interface.
-It also implements the `initializeCpp()` generic that maps an abstract R matrix to a suitable C++ representation for immediate use by package code.
+It also implements the `initializeCpp()` generic that maps an abstract R matrix to a suitable **tatami** representation for immediate use by the package's C++ code.
 
 **beachmat** has several extension packages that mirror those of **tatami**.
 These can be `import`ed by package developers or users on an as-needed basis, assuming that the additional dependencies are acceptable.
@@ -52,7 +51,13 @@ The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package com
 
 The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses **beachmat** to implement matrix representations for its C++ cell annotation library.
 
-Got a use case that we don't know about? Make a PR and add it here!
+Got a use case that you'd like to advertise? Make a [PR](https://github.com/tatami-inc/.github) and add it here!
+
+## Contributors
+
+[![LTLA](https://github.com/LTLA.png?size=50)](https://github.com/LTLA)
+
+Hopefully this will be a bit less lonely soon.
 
 ## References
 
