@@ -33,6 +33,7 @@ As these often depend on additional third-party libraries, they are not included
 - [**tatami_hdf5**](https://github.com/tatami-inc/tatami_hdf5) provides representations for HDF5-backed matrices.
 - [**tatami_tiledb**](https://github.com/tatami-inc/tatami_tiledb) provides representations for TileDB-backed matrices.
 - [**tatami_r**](https://github.com/tatami-inc/tatami_r) provides representations for unknown R matrices.
+- [**tatami_mtx**](https://github.com/tatami-inc/tatami_mtx) enables loading of Matrix Market files into **tatami** matrices.
 
 ### Using R
 
