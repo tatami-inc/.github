@@ -57,6 +57,7 @@ Got a use case that you'd like to advertise? Make a [PR](https://github.com/tata
 ## Contributors
 
 [![LTLA](https://github.com/LTLA.png?size=50)](https://github.com/LTLA)
+[![aboyoun](https://github.com/aboyoun.png?size=50)](https://github.com/aboyoun)
 
 Hopefully this will be a bit less lonely soon.
 
