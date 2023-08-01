@@ -46,11 +46,20 @@ These can be `import`ed by package developers or users on an as-needed basis, as
 
 - [**beachmat.hdf5**](https://github.com/tatami-inc/beachmat.hdf5) vendors **tatami_hdf5** and implements `initializeCpp()` methods for [**HDF5Array**](https://bioconductor.org/packages/HDF5Array) classes.
 
+### Using Python
+
+The [**mattress**](https://pypi.org/project/mattress/) vendors the **tatami** library,
+allowing Python package developers to... well, see the **beachmat** description above.
+Like **beachmat**, **mattress** implements the `tatamize()` generic function that maps various Python matrices into a suitable C++ representation.
+
 ## Use cases
 
-The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package compiles **tatami** to WebAssembly to enable single-cell analyses in the browser.
+The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package compiles **tatami** to WebAssembly to enable single-cell analyses in the browser 
+(see [**kana**](https://kanaverse.org/kana) for a concrete application).
 
-The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses **beachmat** to implement matrix representations for its C++ cell annotation library.
+The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses **beachmat** to implement matrix representations for the associated [C++ cell type annotation library](https://github.com/LTLA/singlepp).
+
+The [**scranpy**](https://pypi.org/packages/scranpy) Python package uses **mattress** to perform single-cell analyses based on methods in the [**libscran**](https://github.com/LTLA/libscran) library.
 
 Got a use case that you'd like to advertise? Make a [PR](https://github.com/tatami-inc/.github) and add it here!
 
