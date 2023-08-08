@@ -54,12 +54,11 @@ Like **beachmat**, **mattress** implements the `tatamize()` generic function tha
 
 ## Use cases
 
-The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package compiles **tatami** to WebAssembly to enable single-cell analyses in the browser 
-(see [**kana**](https://kanaverse.org/kana) for a concrete application).
+The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package compiles **tatami** to WebAssembly to enable single-cell analyses in the browser via [**kana**](https://kanaverse.org/kana).
 
-The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses **beachmat** to implement matrix representations for the associated [C++ cell type annotation library](https://github.com/LTLA/singlepp).
+The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses [**beachmat**](https://bioconductor.org/packages/beachmat) to implement matrix representations for the associated [C++ cell type annotation library](https://github.com/LTLA/singlepp).
 
-The [**scranpy**](https://pypi.org/packages/scranpy) Python package uses **mattress** to perform single-cell analyses based on methods in the [**libscran**](https://github.com/LTLA/libscran) library.
+The [**scranpy**](https://pypi.org/project/scranpy) Python package uses [**mattress**](https://pypi.org/project/mattress) to perform single-cell analyses based on methods in the [**libscran**](https://github.com/LTLA/libscran) library.
 
 Got a use case that you'd like to advertise? Make a [PR](https://github.com/tatami-inc/.github) and add it here!
 
