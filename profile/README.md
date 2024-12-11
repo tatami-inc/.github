@@ -44,21 +44,24 @@ It also implements the `initializeCpp()` generic that maps an abstract R matrix 
 **beachmat** has several extension packages that mirror those of **tatami**.
 These can be `import`ed by package developers or users on an as-needed basis, assuming that the additional dependencies are acceptable.
 
-- [**beachmat.hdf5**](https://github.com/tatami-inc/beachmat.hdf5) vendors **tatami_hdf5** and implements `initializeCpp()` methods for [**HDF5Array**](https://bioconductor.org/packages/HDF5Array) classes.
+- [**beachmat.hdf5**](https://github.com/tatami-inc/beachmat.hdf5) vendors **tatami_hdf5**
+  and implements `initializeCpp()` methods for [**HDF5Array**](https://bioconductor.org/packages/HDF5Array) classes.
+- [**beachmat.tiledb**](https://github.com/tatami-inc/beachmat.tiledb) vendors **tatami_tiledb**
+  and implements `initializeCpp()` methods for the [**TileDBArray**](https://bioconductor.org/packages/TileDBArray) class.
 
 ### Using Python
 
-The [**mattress**](https://pypi.org/project/mattress/) vendors the **tatami** library,
+The [**mattress**](https://github.com/tatami-inc/mattress) package vendors the **tatami** library,
 allowing Python package developers to... well, see the **beachmat** description above.
-Like **beachmat**, **mattress** implements the `tatamize()` generic function that maps various Python matrices into a suitable C++ representation.
+Like **beachmat**, **mattress** implements the `initialize()` generic function that maps various Python matrices into a suitable C++ representation.
 
 ## Use cases
 
 The [**scran.js**](https://github.com/kanaverse/scran.js) Javascript package compiles **tatami** to WebAssembly to enable single-cell analyses in the browser via [**kana**](https://kanaverse.org/kana).
 
-The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses [**beachmat**](https://bioconductor.org/packages/beachmat) to implement matrix representations for the associated [C++ cell type annotation library](https://github.com/LTLA/singlepp).
+The [**SingleR**](https://bioconductor.org/packages/SingleR) R package uses **beachmat** to implement matrix representations for the associated [C++ cell type annotation library](https://github.com/LTLA/singlepp).
 
-The [**scranpy**](https://pypi.org/project/scranpy) Python package uses [**mattress**](https://pypi.org/project/mattress) to perform single-cell analyses based on methods in the [**libscran**](https://github.com/LTLA/libscran) library.
+The [**scranpy**](https://pypi.org/project/scranpy) Python package uses **mattress** to perform single-cell analyses based on the [**libscran**](https://github.com/libscran) libraries.
 
 Got a use case that you'd like to advertise? Make a [PR](https://github.com/tatami-inc/.github) and add it here!
 
@@ -66,6 +69,7 @@ Got a use case that you'd like to advertise? Make a [PR](https://github.com/tata
 
 [![LTLA](https://github.com/LTLA.png?size=50)](https://github.com/LTLA)
 [![aboyoun](https://github.com/aboyoun.png?size=50)](https://github.com/aboyoun)
+[![jkanche](https://github.com/jkanche.png?size=50)](https://github.com/jkanche)
 
 Hopefully this will be a bit less lonely soon.
 
